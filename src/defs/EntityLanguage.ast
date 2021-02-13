@@ -1,0 +1,10 @@
+language MyLanguage
+
+model MyModel {
+    name: string;
+    units: MyUnit[];
+}
+
+public modelunit MyUnit {
+    public name: string;
+}
