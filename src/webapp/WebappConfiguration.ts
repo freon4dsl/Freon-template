@@ -4,8 +4,8 @@ import { PiEnvironment } from "@projectit/core";
  * The one and only reference to the actual language for which this editor runs
  */
 
-import { MyLanguageEnvironment } from "../picode/environment/gen/MyLanguageEnvironment";
-export const editorEnvironment: PiEnvironment = MyLanguageEnvironment.getInstance();
+import { EntityEnvironment } from "../picode/environment/gen/EntityEnvironment";
+export const editorEnvironment: PiEnvironment = EntityEnvironment.getInstance();
 
 /**
  * The one and only reference to the server on which the models are stored
