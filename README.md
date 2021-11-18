@@ -5,7 +5,7 @@ model units.
 
 For an explanation of the content of the project see
 <a href="https://www.projectit.org//020_Getting_Started/020_Project_Structure" target="_blank">
-Project_Structure</a>.
+Project Structure</a>.
 
 ## Getting started
 
