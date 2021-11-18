@@ -55,7 +55,7 @@ In the following the root of the project will be indicated with '~'.
      ```
 
 > The last command opens your preferred browser with the generated editor for the language
->    `Entity` on `<a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a>`. 
+>    `Entity` on `http://localhost:3000/`. 
 >    If Chrome is not your preferred browser, please open the above page in Chrome, because we 
 >    cannot ensure that the editor functions as it should in other browsers.
 
