@@ -60,4 +60,4 @@ In the following the root of the project will be indicated with '~'.
 
 *   Try out the editor
 
-> If you are having trouble using the editor, have a look at the key-bindings under the **Help* menu.
+> If you are having trouble using the editor, have a look at the key-bindings under the *Help* menu.
