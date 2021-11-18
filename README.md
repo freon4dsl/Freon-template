@@ -1,4 +1,5 @@
 # ProjectIt-template
+
 An empty template for a project using <a href="www.projectit.org">ProjectIt</a>. The template
 project provides a shell for the generated editor that enables the user to work with multiple models and
 model units.
