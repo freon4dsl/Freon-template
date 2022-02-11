@@ -38,7 +38,7 @@
   "dependencies": {
     "@projectit/core": "^0.3.0",
     "@projectit/core-svelte": "^0.3.0",
-    "@projectit/meta": "^0.3.0",
+    "@projectit/meta": "^0.3.1",
     "@projectit/server": "^0.3.0",
     "@types/node": "14.14.20",
     "mobx": "6.3.3",
