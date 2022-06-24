@@ -6,7 +6,7 @@ model MyModel {
 }
 
 modelunit MyUnit {
-    public name: identifier;
+    name: identifier;
     child: MyConcept;
 }
 
