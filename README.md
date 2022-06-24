@@ -51,14 +51,16 @@ In the following the root of the project will be indicated with '~'.
 
 *	Open another (bash) terminal, and start the generated editor from it:
      ```bash
+     yern prepare-app
      yarn dev
      ```
 
-> The last command opens your preferred browser with the generated editor for the language
->    `Entity` on `http://localhost:3000/`. 
->    If Chrome is not your preferred browser, please open the above page in Chrome, because we 
->    cannot ensure that the editor functions as it should in other browsers.
+The last command opens your preferred browser with the generated editor for the language
+on [localhost:5000](http://localhost:5000/).
 
 *   Try out the editor
 
-> If you are having trouble using the editor, have a look at the key-bindings under the *Help* menu.
+If you are having trouble using the editor, have a look at the key-bindings under the *Help* menu.
+
+Styling is done though a collection of css variables in `style/_freon_theme-light.scss`.
+If you change the theme, run `yarn prepare-app` to uopdate the running app with the new style.
