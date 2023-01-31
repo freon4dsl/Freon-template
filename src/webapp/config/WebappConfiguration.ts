@@ -6,8 +6,8 @@ import { ServerCommunication } from "../server/ServerCommunication";
 /**
  * The one and only reference to the actual language for which this editor runs
  */
-import { EntityEnvironment } from "../../picode/config/gen/EntityEnvironment";
-export const editorEnvironment: PiEnvironment = EntityEnvironment.getInstance();
+import { MyLanguageEnvironment } from "../../picode/config/gen/MyLanguageEnvironment";
+export const editorEnvironment: PiEnvironment = MyLanguageEnvironment.getInstance();
 LanguageInitializer.initialize();
 
 /**
