@@ -1,13 +1,13 @@
 {
   "private": false,
-  "name": "@projectit/template",
+  "name": "@freon/template",
   "version": "0.5.0",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/projectit-org/ProjectIt-template"
+    "url": "https://github.com/freon4dsl/Freon-template"
   },
   "scripts": {
     "build": "yarn generate && tsc",
@@ -16,7 +16,7 @@
     "start": "sirv public",
     "validate": "svelte-check",
     "errors-only": "svelte-check --threshold error",
-    "generate": "projectit all -d src/defs -o src/picode",
+    "generate": "freon all -d src/defs -o src/picode",
     "prepare-app": "npm run styles-light && npm run styles-dark",
     "styles-light": "smui-theme compile public/site.css -i src/webapp/style",
     "styles-dark": "smui-theme compile public/site-dark.css -i src/webapp/style/dark",
@@ -66,10 +66,10 @@
     "typescript": "4.5.5"
   },
   "dependencies": {
-    "@projectit/core": "0.5.0",
-    "@projectit/core-svelte": "0.5.0",
-    "@projectit/meta": "0.5.0",
-    "@projectit/server": "0.5.0",
+    "@freon4dsl/core": "0.5.0",
+    "@freon4dsl/core-svelte": "0.5.0",
+    "@freon4dsl/meta": "0.5.0",
+    "@freon4dsl/server": "0.5.0",
     "@types/node": "16.11.7",
     "mobx": "6.3.3",
     "mobx-utils": "6.0.4",
