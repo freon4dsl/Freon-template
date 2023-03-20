@@ -13,7 +13,8 @@ import { FreNamedNode } from "@freon4dsl/core";
 // }
 
 /**
- *  Takes care of the communication with the server at SERVER_URL from WebappConfiguration.
+ * Takes care of the communication with the persistence layer.
+ * Which implementation is used is configured in {@link WebappConfiguration}.
  */
 export interface IServerCommunication {
 
@@ -42,7 +43,7 @@ export interface IServerCommunication {
     renameModelUnit(modelName: string, oldName: string, newName: string, piUnit: FreNamedNode) ;
 
     /**
-     * Deletes the complete model with name 'modelName', including all its modelunits
+     * Deletes the complete model with name 'modelName', including all its model units
      * @param modelName
      */
     deleteModel(modelName: string);
@@ -56,9 +57,9 @@ export interface IServerCommunication {
     /**
      * Reads the list of units in model 'modelName' that are available on the server and calls 'modelListCallback'.
      * @param modelName
-     * @param modelListCallback
+     * @param unitListCallback
      */
-    loadUnitList(modelName: string, modelListCallback: (names: string[]) => void);
+    loadUnitList(modelName: string, unitListCallback: (names: string[]) => void);
 
     /**
      * Reads the model unit according to the data in 'modelInfo' from the server and

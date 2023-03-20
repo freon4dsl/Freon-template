@@ -14,7 +14,9 @@ console.log("NODE_PORT:" + node_port+ "  env " + JSON.stringify(process.env));
 
 export class ServerCommunication implements IServerCommunication {
     static serial: FreModelSerializer = new FreModelSerializer();
-    static instance: ServerCommunication;
+
+    private static instance: ServerCommunication;
+
 
     static getInstance(): ServerCommunication {
         if (!(!!ServerCommunication.instance)) {
@@ -95,17 +97,17 @@ export class ServerCommunication implements IServerCommunication {
     /**
      * Reads the list of units in model 'modelName' that are available on the server and calls 'modelListCallback'.
      * @param modelName
-     * @param modelListCallback
+     * @param unitListCallback
      */
-    async loadUnitList(modelName: string, modelListCallback: (names: string[]) => void) {
+    async loadUnitList(modelName: string, unitListCallback: (names: string[]) => void) {
         LOGGER.log(`ServerCommunication.loadUnitList`);
         let modelUnits: string[] = await this.fetchWithTimeout<string[]>(`getUnitList`, `folder=${modelName}`);
         // filter out the modelUnitInterfaces
         if (!!modelUnits) {
             modelUnits = modelUnits.filter( (name: string) => name.indexOf(modelUnitInterfacePostfix) === -1 );
-            modelListCallback(modelUnits);
+            unitListCallback(modelUnits);
         } else {
-            modelListCallback([]);
+            unitListCallback([]);
         }
     }
 
@@ -211,9 +213,9 @@ export class ServerCommunication implements IServerCommunication {
     async renameModelUnit(modelName: string, oldName: string, newName: string, piUnit: FreNamedNode) {
         LOGGER.log(`ServerCommunication.renameModelUnit ${modelName}/${oldName} to ${modelName}/${newName}`);
         // put the unit and its interface under the new name
-        this.putModelUnit(modelName, newName, piUnit);
+        await this.putModelUnit(modelName, newName, piUnit);
         // remove the old unit and interface
-        this.deleteModelUnit(modelName, oldName);
+        await this.deleteModelUnit(modelName, oldName);
     }
 
 }
