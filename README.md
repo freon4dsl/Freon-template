@@ -12,7 +12,7 @@ Project Structure</a>.
 
 In the following the root of the project will be indicated with '~'.
 
-*   Clone or copy branch `master`.
+*   Clone or copy branch `main`.
     
 *   Next, install all necessary packages by running:
     ```bash

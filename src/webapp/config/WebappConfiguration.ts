@@ -7,7 +7,7 @@ import { IndexedDBCommunication } from "../server/IndexedDBCommunication";
 /**
  * The one and only reference to the actual language for which this editor runs
  */
-import { MyLanguageEnvironment } from "../../picode/config/gen/MyLanguageEnvironment";
+import { MyLanguageEnvironment } from "../../frecode/config/gen/MyLanguageEnvironment";
 export const editorEnvironment: FreEnvironment = MyLanguageEnvironment.getInstance();
 LanguageInitializer.initialize();
 
