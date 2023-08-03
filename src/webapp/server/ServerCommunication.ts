@@ -1,6 +1,6 @@
 import { FreLogger } from "@freon4dsl/core";
 import type { FreNamedNode } from "@freon4dsl/core";
-import { FreModelSerializer } from "@freon4dsl/core";
+import { FreLionwebSerializer } from "@freon4dsl/core";
 import type { IServerCommunication } from "./IServerCommunication";
 import { setUserMessage } from "../components/stores/UserMessageStore";
 
@@ -13,7 +13,7 @@ console.log("NODE_PORT:" + node_port+ "  env " + JSON.stringify(process.env));
 
 
 export class ServerCommunication implements IServerCommunication {
-    static serial: FreModelSerializer = new FreModelSerializer();
+    static serial: FreLionwebSerializer = new FreLionwebSerializer();
     static instance: ServerCommunication;
 
     static getInstance(): ServerCommunication {
