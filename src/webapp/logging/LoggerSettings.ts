@@ -14,6 +14,7 @@ export function muteLogs() {
     FreLogger.mute("LayoutComponent");
     FreLogger.mute("ListComponent");
     FreLogger.mute("OptionalComponent");
+    FreLogger.mute("OptionalComponentNew");
     FreLogger.mute("FreonComponent");
     FreLogger.mute("RenderComponent");
     FreLogger.mute("TableCellComponent");
@@ -22,7 +23,6 @@ export function muteLogs() {
     FreLogger.mute("TextDropdownComponent");
 
     // from ~/core:
-    FreLogger.mute("FreProjectionHandler");
     FreLogger.mute("FreEditor");
     FreLogger.mute("FreUtils");
     FreLogger.mute("SelectOptionList");
@@ -36,9 +36,13 @@ export function muteLogs() {
     FreLogger.mute("ActionBox");
     FreLogger.mute("FreCommand");
     FreLogger.mute("BehaviorUtils");
+    FreLogger.mute("ListUtil");
+    FreLogger.mute("ArrayUtil");
     FreLogger.mute("Box");
-    // FreLogger.mute("ListBox");
+    FreLogger.mute("ListBox");
     FreLogger.mute("LayoutBox");
+    FreLogger.mute("FreProjectionHandler");
+    FreLogger.mute("FreLionwebSerializer");
 
     // from ~/webapp:
     FreLogger.mute("EditorCommunication");

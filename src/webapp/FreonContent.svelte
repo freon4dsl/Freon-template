@@ -10,13 +10,13 @@
     import SplitPane from "./components/SplitPane.svelte";
     import EditorPart from "./components/editor-panel/EditorPart.svelte";
     import InfoPanel from "./components/info-panel/InfoPanel.svelte";
-    import { FreErrorSeverity } from "@freon4dsl/core";
     import Button from "@smui/button";
+    import { FreErrorSeverity } from "@freon4dsl/core";
 
     // <Icon slot='icon' class="less-padding" component={Svg} viewBox='0 0 48 48'>
     //     {#if $severity === FreErrorSeverity.Info}
     //     <path d={mdiInformation}/>
-    // {:else if $severity === FreErrorSeverity.hint}
+    // {:else if $severity === FreErrorSeverity.Hint}
     // <path d={mdiLightbulb}/>
     // {:else if $severity === FreErrorSeverity.Warning}
     // <path d={mdiAlertCircle}/>
@@ -33,7 +33,7 @@
     $: severityClass =
         $severity === FreErrorSeverity.Info ?
             "blue"
-        : ($severity === FreErrorSeverity.hint ?
+        : ($severity === FreErrorSeverity.Hint ?
                 "green"
            : ($severity === FreErrorSeverity.Warning ?
                 "plum"
