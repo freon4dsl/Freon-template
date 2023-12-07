@@ -22,6 +22,7 @@ export function muteLogs() {
     FreLogger.mute("TextDropdownComponent");
 
     // from ~/core:
+    FreLogger.mute("FreProjectionHandler");
     FreLogger.mute("FreEditor");
     FreLogger.mute("FreUtils");
     FreLogger.mute("SelectOptionList");

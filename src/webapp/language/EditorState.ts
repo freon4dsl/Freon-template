@@ -1,10 +1,9 @@
 // This file contains all methods to connect the webapp to the Freon generated language editorEnvironment and to the server that stores the models
 import {
     FreError,
-    FreErrorSeverity,
     FreLogger,
     FreOwnerDescriptor,
-    SeverityType
+    FreErrorSeverity
 } from "@freon4dsl/core";
 import type {
     FreNode,
@@ -321,7 +320,7 @@ export class EditorState {
                 serverCommunication.putModelUnit(this.currentModel.name, unit.name, unit);
             }
         } catch (e) {
-            setUserMessage(e.message, SeverityType.error);
+            setUserMessage(e.message, FreErrorSeverity.Error);
         }
         // if (elem) {
         // TODO find way to get interface without use of the server, because of concurrency error
@@ -344,7 +343,7 @@ export class EditorState {
     private makeUnitName(fileName: string): string {
         const nameExist: boolean = !!this.currentModel.getUnits().find(existing => existing.name === fileName);
         if (nameExist) {
-            setUserMessage(`Unit named '${fileName}' already exists, adding number.`, SeverityType.error);
+            setUserMessage(`Unit named '${fileName}' already exists, adding number.`, FreErrorSeverity.Error);
             // find the existing names that start with the file name
             const unitsWithSimiliarName = this.currentModel.getUnits().filter(existing => existing.name.startsWith(fileName));
             if (unitsWithSimiliarName.length > 1) { // there are already numbered units

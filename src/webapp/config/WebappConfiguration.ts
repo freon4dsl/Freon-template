@@ -7,8 +7,8 @@ import { ServerCommunication } from "../server/ServerCommunication";
 /**
  * The one and only reference to the actual language for which this editor runs
  */
-import { MyLanguageEnvironment } from "../../picode/config/gen/MyLanguageEnvironment";
-export const editorEnvironment: FreEnvironment = MyLanguageEnvironment.getInstance();
+import { MyModelEnvironment } from "../../picode/config/gen/MyModelEnvironment";
+export const editorEnvironment: FreEnvironment = MyModelEnvironment.getInstance();
 LanguageInitializer.initialize();
 
 /**
