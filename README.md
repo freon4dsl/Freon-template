@@ -1,11 +1,11 @@
-# ProjectIt-template
+# Freon template
 
-An empty template for a project using <a href="https://www.projectit.org">ProjectIt</a>. The template
+An empty template for a project using <a href="https://www.freon4dsl.dev">Freon</a>. The template
 project provides a shell for the generated editor that enables the user to work with multiple models and
 model units.
 
 For an explanation of the content of the project see
-<a href="https://www.projectit.org/020_Getting_Started/020_Project_Structure" target="_blank">
+<a href="https://www.freon4dsl.dev/020_Getting_Started/020_Project_Structure" target="_blank">
 Project Structure</a>.
 
 ## Getting started
@@ -24,8 +24,8 @@ In the following the root of the project will be indicated with '~'.
 
 *	Create a language definition file which defines the structure of your language. The
      extension of this file must be `.ast`. You can, for instance, copy
-     `EntityLanguage.ast` from the ProjectIt example to your own `defs`-folder. Or, you can follow the
-     tutorial on <a href="https://www.projectit.org/030_Developing_a_Language/010_Default_Level" target="_blank">language structure definition</a>.
+     `EntityLanguage.ast` from the Freon example to your own `defs`-folder. Or, you can follow the
+     tutorial on <a href="https://www.freon4dsl.dev/030_Developing_a_Language/010_Default_Level" target="_blank">language structure definition</a>.
 
 > Note: Only the language structure is required. Defaults will be generated for the 
 > editor, scoper, typer, and validator. This is called the first level of customization.
