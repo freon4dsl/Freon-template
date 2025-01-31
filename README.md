@@ -1,5 +1,9 @@
 # Freon template
 
+> &#9432; **NOTE** This template is out of date, and only works for the old Freon 0.0.6.</br>
+> For Freon 1.0.0 use `npm create freon@latest` to create a project`.
+
+``
 An empty template for a project using <a href="https://www.freon4dsl.dev">Freon</a>. The template
 project provides a shell for the generated editor that enables the user to work with multiple models and
 model units.
